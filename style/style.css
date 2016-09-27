@@ -110,6 +110,21 @@
 .index ul li.control{
 	background-color: #ccc;
 }
+#box{
+	width: 800px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+#box .b{
+	width: 500px;
+	height: 50px;
+	font-size: 20px;
+}
+#box button{
+	width: 140px;
+	height: 50px;
+	font-size: 20px;
+}
 .info{
 	width: 1200px;
 	height: 490px;
