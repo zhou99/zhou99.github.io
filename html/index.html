@@ -60,9 +60,12 @@
 		</ul>
 	</div>
 	<div id="box">
-	{{msg}}
-		<input type="text">
-		<input type="button">
+			<input type="text" v-model="t1" v-on:keyup="get()" :class="b">
+			<button>搜索一下</button>
+		<ul>
+			<li v-for="value in mydata" :class="c">{{value}}</li>
+		</ul>
+		<p v-show="mydata.length==0">暂无数据，请输入内容搜索</p>
 	</div>
 	<div class="info">
 		<div class="aside">
@@ -79,13 +82,14 @@
 			  	<figcaption><h2>自我评价</h2></figcaption>
 			  	<hr><br>
 			  	<img src="../image/2.gif"/>
-			  	<p class="pp">喜欢研究互联网前沿技术和新产品，一直进行计算机技术及互联网知识的自我学习。对相关专业能力的自我评估如下：<br>
+			  	<p class="pp">对互联网行业有浓厚兴趣，一直利用业余时间进行计算机技术及互联网知识的自我学习。喜欢研究各种互联网前沿技术和新产品，喜欢与人沟通及分享。希望可以拥有一个施展的平台，很高兴能遇见你。<br> 
+				在计算机领域对相关专业能力的自我评估如下：<br>
 				1.掌握了计算机技术的基础理论知识；<br>
-				2.熟悉Photoshop、illustrator、Coreldraw平面设计软件及After Effects视频特效软件，有较好的审美能力；<br>
+				2.熟悉Photoshop、illustrator、Coreldraw等平面设计软件；<br>
 				3.熟悉HTML5、CSS3、JavaScript、AJAX等WEB技术，能快速布局及使用原生JavaScript开发交互页面；<br>
-				4.熟悉jQuery类库及前端响应式框架Bootstrap，了解Angular.js；<br>
-				5.掌握移动端WebApp的基本规范；<br>
-				6.熟悉后端语言PHP及数据库MySQL，掌握了后端MVC框架Thinkphp、CodeIgniter基本使用。<br>
+				4.熟悉jQuery类库及前端框架Bootstrap的使用，了解Angular.js；<br>
+				5.对移动端WebApp有一定的了解；<br>
+				6.熟悉PHP语言，熟悉MySQL及MongoDB数据库，掌握后端MVC框架Thinkphp、CodeIgniter等使用。<br>
 				</p>
 				</figure>
 			</div>
@@ -96,21 +100,22 @@
 			  	<img src="../image/dd.gif"/>
 			  	<h3><br>2015/6--至今： 淮安市机关事务管理局</h3>
 			  	<p>职位名称： 网站维护工程师   &nbsp &nbsp      部门：管理中心<br>
-				1. 负责对各部门传送的日常内容进行汇总更新，确保各版块所呈现内容的准确性和时效性；<br> 
-				2. 负责与网站开发人员对前后台页面模块改版时的跟进，期间参与了机关网站的重大改版，融入了更好的用户访问体验； <br>
-				3. 协助单位各部门专题活动公告展示，并在一般集体活动时担任相关摄影记录工作；<br> 
-				4. 负责与其它机关网站日常联络及信息交流合作。 <br>
-				<br><br>
+				1. 负责机关网站的日常内容维护，包括信息收集与确认、新闻更新及整理归纳，确保所呈现信息的准确性和时效性；<br> 
+				2. 负责网站开发人员对前后台页面模块改版时的跟进，期间参与了机关网站的重大改版，融入了更好的用户访问体验； <br>
+				3. 协助单位各部门专题活动策划及公告展示，在一般活动时担任相关摄影记录工作；<br> 
+				4. 负责与其它机关网站内容合作与日常联络等。 <br>
+				离职原因：机关工作与自己职业长期发展不符。<br><br>
 				<h3>2013/7--2015 /5： 启洋电机（苏州）有限公司</h3>
 				<p>职位名称： 供应商管理担当     &nbsp &nbsp   部门：品质TEAM <br>
-				毕业的第一份外企工作使我学习了成熟的管理模式和积极的工作理念，在职期间日常业务内容如下：<br>
+				毕业的第一份工作使我掌握了供应链相关的业务技能。如采购管理中的订单管理、成本分析等，质量管理中的7大手法、8D报告、5大工具等。<br> 
+				日常业务内容：<br>
 				1.负责对供应商产品的信息统计，参与供应商的KPI考评工作；<br> 
 				2.协同采购部出差考察供应商，对新开发供应商及OEM产品进行评估；<br> 
 				3.新开发产品实用及耐久试验问题点跟踪改善直至产品上市；<br> 
 				4.协同营业部对客户产品投诉信息确认，与供应商沟通协调进行产品改善；<br> 
 				5.协同售后服务部进行产品巡回维修支持。<br> 
 				离职原因：<br> 
-				因个人问题需离家乡较近且可以从事喜欢的互联网相关的工作。
+				可以从事互联网相关并选择了一份离家乡较近的工作。
 				</p>
 				</figure>
 			</div>
@@ -120,7 +125,7 @@
 			  	<hr><br>
 			  	<img src="../image/ff.gif"/>
 			  	<p><br>2010/9--2013/7	苏州市职业大学	&nbsp数控技术	&nbsp大专<br>
-			  	2015/11--2018/9 （预估）	南京航空航天大学	&nbsp计算机科学与技术&nbsp 专升本</p>
+			  	2016/3--2018/9 （预估）	南京航空航天大学	&nbsp计算机科学与技术&nbsp 专升本</p>
 				</figure>
 			</div>
 			<div class="fig fig1">
@@ -140,18 +145,18 @@
 			<li>
 				<p>Nice to meeting you <br>	
 				你好，WEB。<br>
-				热爱编程，热爱生活，做一个有趣的人。<br></p>
+				热爱编程，热爱生活,做一个有趣的人。<br></p>
 			</li>
 			<li><p>关于我</p>
 			<ul>
-				<li><a href="https://site.douban.com/120214/" target="_blank">旅行</a></li>
+				<li><a href="https://site.douban.com/thelifejourney/" target="_blank">旅行</a></li>
 				<li><a href="http://www.lofter.com/login?urschecked=true" target="_blank">摄影</a></li>
 			</ul>
 			</li>
 			<li><!-- <a href="https://wx.qq.com/" target="_blank"><img src="../image/a.png" alt="燃烧的灵魂终将相遇"></a> -->
 				<p>Tel:  18800668569 <br>
 				E-mail：849719036@qq.com <br>
-				Github：https://github.com/zhou99</p>
+				Github；https://github.com/zhou99</p>
 			</li>
 		</ul>
 		</div>
@@ -161,6 +166,7 @@
 	</div>
 	<script type="text/javascript" src='../js/animal.js'></script>
 	<script type="text/javascript" src='../js/vue.js'></script>
+	<script type="text/javascript" src='../js/vue-resourse.js'></script>
 	<script type="text/javascript" src='../js/search.js'></script>
 </body>
 </html>
