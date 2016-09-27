@@ -13,7 +13,7 @@
 				},{
 					jsonp:'cb'
 				}).then(function(res){
-					this.mydata=res.data.s;
+					this.myData=res.data.s;
 				},function(res){
 
 				})
