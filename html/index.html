@@ -63,7 +63,7 @@
 			<input type="text" v-model="t1" v-on:keyup="get()" :class="b">
 			<button>搜索一下</button>
 		<ul>
-			<li v-for="value in mydata" :class="c">{{value}}</li>
+			<li v-for="value in myData">{{value}}</li>
 		</ul>
 		<p v-show="mydata.length==0">暂无数据，请输入内容搜索</p>
 	</div>

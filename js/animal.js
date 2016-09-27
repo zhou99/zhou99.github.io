@@ -34,7 +34,7 @@ window.onload=function (){
 	}
 	var arc=document.getElementById('article1');
 	var arc1=arc.getElementsByTagName('div');
-	var tab=document.getElementsByTagName('ul')[2];
+	var tab=document.getElementsByTagName('ul')[3];
 	var tab1=tab.getElementsByTagName('li');
 	for(i=0;i<tab1.length;i++){
 		tab1[i].n=i;
