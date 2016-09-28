@@ -1,5 +1,5 @@
 (function() {
-	var c=new Vue({
+	new Vue({
 		el:'#box',
 		data:{
 			myData:[],
@@ -13,9 +13,9 @@
 				},{
 					jsonp:'cb'
 				}).then(function(res){
-					this.myData=res.data.s;
+					this.myData=res.data.s
 				},function(res){
-
+					
 				})
 			}
 		}
