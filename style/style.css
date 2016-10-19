@@ -58,6 +58,7 @@
 	border-radius: 5px;
 	background-color: #eee;
 	outline: none; 
+	cursor: pointer;
 }
 .nav1 .li{
 	position: relative;
@@ -168,6 +169,7 @@
 	width: 140px;
 	height: 50px;
 	font-size: 20px;
+	cursor: pointer;
 }
 .info{
 	width: 1200px;
