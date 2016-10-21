@@ -56,4 +56,14 @@ window.onload=function (){
 		wei1.onmouseout=function(){
 			sao.style.display='none';
 		}
+	var button=document.getElementById('button');
+	var client=document.documentElement.clientHeight||document.body.clientHeight
+	window.onscroll=function(){
+		var scroll=document.documentElement.scrollTop||document.body.scrollTop;
+		if(scroll>client){
+			button.style.display='block';
+		}else{
+			button.style.display='none';
+		}
+	}
 };

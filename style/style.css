@@ -224,7 +224,7 @@
 .footer .foo ul li a{
 	text-decoration: none;
 	color: #999;
-	font-size: 15px;
+	font-size: 14px;
 }
 .footer .foo ul li p{
 	color: #999;
@@ -236,7 +236,7 @@
 	width:100px;
 	height: 100px;
 }
-.box img{
+.box1 img{
 	width:40px;
 	height: 40px;
 	background-color: #000;
@@ -244,8 +244,8 @@
 	right: 0px;
 	bottom: 0;
 }
-.box a{
-	font-size: 9px;
+.box1{
+	display: none;
 }
 .info .article{
 	float: right;
