@@ -13,19 +13,19 @@
 	color: #fff;
 	font-family: "Microsoft YaHei";
 }
-.head .nav h2{
+.head .nav .head_h2{
 	line-height: 80px;
 	float: left;
 }
 .head .nav .nav1{
-	width: 300px;
+	width: 400px;
 	height: 80px;
-	float: right;
-	padding-right: 180px;
+	float: left;
+	padding-left: 100px;
 }
-.nav1 ul li{
-	float: right;
-	line-height: 80px;
+.nav1 ul>li{
+	float: left;
+ 	line-height: 80px; 
 	width: 100px;
 	list-style: none;
 	text-align: center;
@@ -34,9 +34,65 @@
 	text-decoration: none;
 	color: #fff;
 }
-.nav1 ul li:hover{
+.nav1 ul>li:hover{
 	background-color: #000;
 	cursor: pointer;
+}
+.game span{
+	width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 30px solid #555;
+    position: absolute;
+    top:-25px;
+    left:40px;
+}
+.litwo{
+	position: relative;
+}
+.game{
+	display: none;
+	position: absolute;
+	top:80px;
+	left: 0px;
+	width: 100px;
+	z-index: 15;
+	background-color: #555;
+}
+.game li{
+	height: 80px;
+	line-height: 40px;
+}
+.litwo:hover .game{
+	display: block;
+}
+.nav1 .li{
+	position: relative;
+}
+.weixin{
+	position: absolute;
+	top:70px;
+	left: -72px;
+	display: none;
+	z-index: 10;
+}
+.weixin img{
+	width: 252px;
+	height: 300px;
+}
+.weixin span{
+	width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 30px solid #fff;
+    position: absolute;
+    top:-20px;
+    left:110px;
+}
+.li:hover .weixin{
+	display: block;
 }
 .head .search{
 	float: right;
@@ -59,30 +115,6 @@
 	background-color: #eee;
 	outline: none; 
 	cursor: pointer;
-}
-.nav1 .li{
-	position: relative;
-}
-.weixin{
-	position: absolute;
-	top:70px;
-	left: 120px;
-	display: none;
-	z-index: 10;
-}
-.weixin img{
-	width: 252px;
-	height: 300px;
-}
-.weixin span{
-	width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 30px solid #fff;
-    position: absolute;
-    top:-20px;
-    left: 120px;
 }
 .section{
 	width: 1200px;

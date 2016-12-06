@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>配对游戏</title>
+	<style>
+		body{
+			position: relative;
+		}
+		table{
+			margin: 15px auto 15px; 
+			/*font-family: webdings;*/
+			font-size: 30px;
+			background: rgba(60,180,100,0.3);
+			color: blue;
+			width: 500px;
+			height: 500px;
+		}
+		hr{
+			width: 600px;
+			height: 5px;
+			background: orange;
+		}
+		h2{text-align: center;}
+		td{
+			text-align: center;
+			background: rgba(160,80,10,0.1);
+			width: 50px;
+			height: 50px;
+		}
+		footer{
+			position: absolute;
+			left: 20px;
+			top: 300px;
+			text-align: center;
+			background-color: #eee;
+			padding: 10px;
+			width: 200px;
+		}
+		.left{
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			background-color: #eee;
+			width: 200px;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h2>配对游戏<hr></h2>
+	<table>
+		<script type="text/javascript">
+			var cols=5,rows=4;
+			for(var i=0;i<rows;i++){
+				str="<tr>";
+				for(var j=0;j<cols;j++){
+					var sid="img"+((cols*i)+j)
+					str+='<td id="'+sid+'" onclick="showimg('+((cols*i)+j)+')">'
+					//str+=sid  //测试代码
+					str+="</td>"
+				}
+				str+="</tr>"
+				document.write(str)
+			}
+		</script>
+	</table>
+	<div class="left">
+	<h3>玩法介绍</h3>
+	点击开始游戏按钮进行游戏，所有数字配对成功即可通关。<br>
+	<h3>开发者——周杰</h3>
+	</div>
+	<footer>
+		<b>用时：</b><span id="gameTime">0秒</span>&nbsp&nbsp&nbsp
+		<input type="button" value="开始游戏" onclick="init()">
+	</footer>
+</body>
+</html>
+<script type="text/javascript">
+	var length=cols*rows; //表格单元格数目
+	var map=[]; //存储单元格里的内容
+	var user=[]; //存储每个单元格是否可以翻开的状态
+	var ctr;//点的是否是为第一个图形
+	var finished;//结束标记
+	var startTime;
+	var times=0,timeb=true;
+	var firstIndex=0,secondIndex=0; //点击第一张、第二张图片的索引
+	var starHandler;//定时器句柄
+	// var d=new Date();
+	// var first; //字符区域的首字符
+	var newsatrt;
+	function $(x){
+		return document.getElementById(x)
+	}
+	for(var i=0;i<length/2;i++){
+		map[i]=i;
+		map[length/2+i]=i;
+	}
+	function init(){
+		for (var i=0;i<length;i++){
+			$("img"+i).innerHTML=''
+			user[i]=0; //是否显示图片，0为显示背面
+		}
+		// alert(map)
+		map.sort(function(){return Math.random()-0.5});//随机排列
+		// alert(map)
+		ctr=0; //未点击第一张图片
+		finished=0; //记录已经配对图片的个数
+		clearTimeout(startTime) //清楚计时器
+		times=0; //计时器变量清零
+		$("gameTime").innerHTML=times+'秒'
+		newsatrt=true; //标记为新开局*
+	}
+	function showimg(x){
+		if(newsatrt){
+			start();
+			newsatrt=false;
+		}
+		// alert(x)
+		if(user[x]==1)return;
+		$("img"+x).innerHTML=map[x]
+
+		if (ctr==0) {
+			ctr++;
+			firstIndex=x //记录第一张图片索引
+		}else{
+			if (firstIndex!=x) {
+				 secondIndex=x;//记录第二张图片索引
+				ctr=0;
+				check()
+			}
+		}
+	}
+	function check(){
+		if(map[firstIndex]==map[secondIndex]){
+			finished++;
+			user[firstIndex]=1;
+			user[secondIndex]=1; //不能再翻
+			ctr=0;
+		}else if(user[firstIndex]==0){
+			$('img'+firstIndex).innerHTML='';
+			firstIndex=secondIndex;
+			secondIndex=0;
+			ctr++ //标记已经点击了一张
+			}
+		if(finished==length/2){
+				clearTimeout(startTime);
+				if (confirm("恭喜你！再来一局？")==true)
+				{
+					init()
+				}
+		}
+	}
+	function start(){
+		times+=1
+		$("gameTime").innerHTML=times+'秒';
+		startTime=setTimeout("start()",1000)
+	}
+
+</script>>
