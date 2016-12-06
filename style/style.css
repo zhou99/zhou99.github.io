@@ -60,10 +60,6 @@
 	z-index: 15;
 	background-color: #555;
 }
-.game li{
-	height: 80px;
-	line-height: 40px;
-}
 .litwo:hover .game{
 	display: block;
 }
