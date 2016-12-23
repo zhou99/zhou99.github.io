@@ -32,6 +32,24 @@
             background-color: #ddd;
         }
     </style>
+</head>
+<body>
+<div id="container">
+    <div id="score">积分：<span>0</span></div>
+    <div id="startGame">Start</div>
+    <div id = "gameOver">
+        <div>Game over !!!!</div>
+        <button value="OK" onclick="restart()">重新开始</button>
+    </div>
+    <footer>
+        <h3>玩法介绍</h3><br>
+        1.点击Start按钮开始游戏<br><br>
+        2.按键盘左右方向键移动红色长条小方块,并按空格键发射子弹<br><br>
+        3.绿色方块需要一颗子弹，黄色方块需要2颗子弹<br><br>
+        4.消灭所有方块则成功通关！加油吧！！<br><br>
+    </footer>
+</div>
+</body>
     <script>
         window.onload=function(){
             var container = document.getElementById("container");
@@ -244,22 +262,4 @@
             window.location.reload();
         }
     </script>
-</head>
-<body>
-<div id="container">
-    <div id="score">积分：<span>0</span></div>
-    <div id="startGame">Start</div>
-    <div id = "gameOver">
-        <div>Game over !!!!</div>
-        <button value="OK" onclick="restart()">重新开始</button>
-    </div>
-    <footer>
-        <h3>玩法介绍</h3><br>
-        1.点击Start按钮开始游戏<br><br>
-        2.按键盘左右方向键移动红色长条小方块,并按空格键发射子弹<br><br>
-        3.消灭所有方块则成功通关<br><br>
-        <h3>开发者——周杰</h3>
-    </footer>
-</div>
-</body>
 </html>
