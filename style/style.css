@@ -269,6 +269,9 @@
 .program .pro h3{
 	text-indent: 80px;
 }
+.program .pro p{
+	font-family: 'Microsoft YaHei';
+}
 .footer{
 	width: 100%;
 	height: 150px;
