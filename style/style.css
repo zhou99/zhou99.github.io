@@ -103,15 +103,17 @@
 	outline: none;
 }
 .head .search button{
-	width: 50px;
+	width: 60px;
 	height: 30px;
 	line-height:30px
-	border: 1px solid #ccc;
 	border-radius: 5px;
-	background-color: #eee;
-	outline: none; 
+	border: 1px solid #ccc;
+	background-color: #fff;
 	cursor: pointer;
 }
+/*.head .search button:hover{
+	background-color: #EECFA1;
+}*/
 .section{
 	width: 1200px;
 	height:490px;
