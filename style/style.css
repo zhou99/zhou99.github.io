@@ -6,6 +6,7 @@
 	width: 100%;
 	height: 80px;
 	background-color:#333;
+	min-width: 1200px;
 }
 .head .nav{
 	width:1000px;
@@ -280,6 +281,7 @@
 	background-color: #333;
 	margin-top: 10px;
 	clear: both;
+	min-width: 1200px;
 }
 .footer .foo{
 	width:1200px;
