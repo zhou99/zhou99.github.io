@@ -272,10 +272,13 @@
 	cursor: pointer;
 }
 .program .pro h3{
-	text-indent: 80px;
+	text-align: center;
+	text-indent: -140px;
 }
 .program .pro p{
 	font-family: 'Microsoft YaHei';
+	text-align: center;
+	text-indent: -140px;
 }
 .footer{
 	width: 100%;
@@ -309,7 +312,10 @@
 	color: #999;
 }
 .footer .foo ul li a:hover{
-	color: #fff;
+	color: #CDC673;
+}
+.footer .foo ul li .git{
+	font-size: 18px;
 }
 .footer .foo ul li img{
 	width:100px;
