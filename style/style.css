@@ -268,7 +268,7 @@
 	height: 250px;
 }
 .program .pro img:hover{
-	opacity: 0.5;
+	opacity: 0.6;
 	cursor: pointer;
 }
 .program .pro h3{
@@ -347,15 +347,15 @@
 	line-height: 30px;
 }
 .info .article .fig img{
-	width:200px;
-	height: 120px;
+	width:900px;
+	height: 300px;
 }
 .info .article .fig img:hover{
-	transform:scale(1.15,1.15);
-	-ms-transform:scale(1.15,1.15);
-	-moz-transform:scale(1.15,1.15); 
-	-webkit-transform:scale(1.15,1.15);
-	-o-transform:scale(1.15,1.15);
+	transform:scale(1.03,1.03);
+	-ms-transform:scale(1.03,1.03);
+	-moz-transform:scale(1.03,1.03); 
+	-webkit-transform:scale(1.03,1.03);
+	-o-transform:scale(1.03,1.03);
 	/* transform:rotate(36deg);
 	-ms-transform:rotate(36deg);
 	-moz-transform:rotate(36deg); 
